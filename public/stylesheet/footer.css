@@ -1,0 +1,18 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    background-color: #333;
+    padding: 1.2rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contacto{
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon-contacto {
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem;
+  }

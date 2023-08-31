@@ -1,0 +1,119 @@
+*{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #333;
+  padding: 1.2rem;
+  color: #fff;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+  grid-gap: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.login{
+  text-align: right;
+  float: right;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/banner2pg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 50vw;
+  margin-bottom: 1rem;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+.comprar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+.comprar:hover {
+  background-color: #555;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  background-color: #333;
+  padding: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.contacto{
+  margin-bottom: 0.5rem;
+}
+
+.icon-contacto {
+  color: #fff;
+  text-decoration: none;
+  margin: 0.5rem;
+}
