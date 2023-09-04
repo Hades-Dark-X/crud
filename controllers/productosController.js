@@ -56,7 +56,7 @@ const controllers = {
       await db.Producto.destroy({
         where: { id: productoId }
       });
-      res.status(200).redirect('/productos');
+      res.status(200).redirect('/');
     } catch (error) {
       console.error({ message: 'Error en el servidor', error });
       res.status(500).send('Error en el servidor');

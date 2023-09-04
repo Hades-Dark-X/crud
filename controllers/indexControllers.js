@@ -17,6 +17,10 @@ const indexController = {
 
     login: (req, res)=> {
         res.render('login', {titulo: 'Game Store - Login'})
+    },
+
+    actualizar: (req, res)=>{
+        res.render('actualizar')
     }
   };
   

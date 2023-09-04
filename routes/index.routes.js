@@ -7,9 +7,17 @@ const indexrouter = express.Router();
 
 
 indexrouter.get('/', indexController.Inicio);
-indexrouter.get('/agregar', indexController.agregar);
+
+/* rutas para el crud */
 indexrouter.get('/productos', controllers.obtenerProductos);
-indexrouter.post('porductos', controllers.agregarProducto)
+indexrouter.post('/productos/agregar', controllers.agregarProducto)
+
+indexrouter.get('/productos/actualizar', indexController.actualizar)
+indexrouter.put('/productos/actualizar/:id', controllers.actualizarProducto);
+
+indexrouter.get('/productos/eliminar/:id', controllers.eliminarProducto)
+indexrouter.delete('/productos/eliminar/:id', controllers.eliminarProducto);
+
 indexrouter.get('/contacto', indexController.contacto);
 indexrouter.get('/login', indexController.login);
 
