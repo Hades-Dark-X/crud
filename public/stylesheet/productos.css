@@ -24,3 +24,14 @@
   tr:hover {
     background-color: #e0e0e0;
   }
+
+  /* Estilos para el botón de eliminar */
+a[data-method="DELETE"] {
+  color: #ff0000;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+a[data-method="DELETE"]:hover {
+  text-decoration: underline;
+}

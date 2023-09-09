@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/header.css">
+    <link rel="stylesheet" href="/stylesheet/formularios.css">
+    <link rel="stylesheet" href="/stylesheet/footer.css">
     <title>Login</title>
 </head>
 
@@ -11,7 +14,16 @@
     <main>
         <%- include ('partials/header') %>
 
-            <h1>pagina de login</h1>
+            <h2>Iniciar Sesión</h2>
+            <form action="" method="">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required><br><br>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+                <input type="submit" value="Iniciar Sesión">
+            </form>
 
             <%- include ('partials/footer') %>
 

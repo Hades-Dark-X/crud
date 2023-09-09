@@ -1,6 +1,7 @@
 /* Importando las dependencias */
 const express= require('express');
 const path = require('path');
+const methodOverride = require('method-override');
 const indexrouter= require('./routes/index.routes');
 
 
@@ -13,7 +14,8 @@ app.set('views', path.join(__dirname, 'views'));    /* ruta de las vistas */
 
 app.use(express.static(path.join(__dirname, 'public'))); /* ruta absoluta de public */
 app.use(express.urlencoded({ extended: true })); /* recibe los datos del formulario */
-app.use(express.json()) /* pasa los datos del formulario en formato JSON */ 
+app.use(express.json()) /* pasa los datos del formulario en formato JSON */
+app.use(methodOverride('_method')); /* sobre escribe o sobre crga las peticiones http */
 
 /* rutas */
 app.use('/', indexrouter)

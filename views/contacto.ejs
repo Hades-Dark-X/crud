@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/header.css">
+    <link rel="stylesheet" href="/stylesheet/formularios.css">
+    <link rel="stylesheet" href="/stylesheet/footer.css">
     <title>Contacto</title>
 </head>
 
@@ -11,7 +14,19 @@
     <main>
         <%- include ('partials/header') %>
 
-            <h1>pagina que corresponde a contacto</h1>
+            <h2>Contacto</h2>
+            <form action="" method="">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Enviar Mensaje">
+            </form>
 
             <%- include ('partials/footer') %>
 

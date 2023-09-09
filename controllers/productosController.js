@@ -35,19 +35,30 @@ const controllers = {
 
   actualizarProducto: async (req, res) => {
     const productoId = req.params.id;
-    const { titulo, descripcion, precio, stock } = req.body;
-
+    const { nombre, descripcion, precio, stock } = req.body;
+  
     try {
+      // Actualiza los campos del producto en función de los datos recibidos en la solicitud
       await db.Producto.update(
-        { titulo, descripcion, precio, stock },
-        { where: { id: productoId } }
+        {
+          nombre: nombre,
+          descripcion: descripcion,
+          precio: precio,
+          stock: stock,
+        },
+        {
+          where: { id: productoId },
+        }
       );
-      res.status(200).redirect('/productos');
+  
+      // Después de actualizar, redirige a la página de productos
+      res.redirect('/productos');
     } catch (error) {
       console.error({ message: 'Error en el servidor', error });
       res.status(500).send('Error en el servidor');
     }
   },
+  
 
   eliminarProducto: async (req, res) => {
     const productoId = req.params.id;
@@ -56,7 +67,7 @@ const controllers = {
       await db.Producto.destroy({
         where: { id: productoId }
       });
-      res.status(200).redirect('/');
+      res.status(200).redirect('/productos');
     } catch (error) {
       console.error({ message: 'Error en el servidor', error });
       res.status(500).send('Error en el servidor');

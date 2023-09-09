@@ -1,3 +1,6 @@
+/* importando el modelo y la conexión a db */
+const db= require('../models');
+
 const indexController = {
     Inicio: (req, res) => {
       res.render('index', {titulo: 'Game Store'});
@@ -19,9 +22,23 @@ const indexController = {
         res.render('login', {titulo: 'Game Store - Login'})
     },
 
-    actualizar: (req, res)=>{
-        res.render('actualizar')
-    }
+    obtenerProducto: async (req, res) => {
+      const productoId = req.params.id;
+    
+      try {
+          const producto = await db.Producto.findByPk(productoId);
+      
+          if (!producto) {
+              return res.status(404).send('Producto no encontrado');
+          }
+      
+          res.render('editar', { producto });
+      } catch (error) {
+          console.error({ message: 'Error en el servidor', error });
+          res.status(500).send('Error en el servidor');
+      }
+  },
+  
   };
   
   module.exports = indexController;

@@ -12,7 +12,7 @@ indexrouter.get('/', indexController.Inicio);
 indexrouter.get('/productos', controllers.obtenerProductos);
 indexrouter.post('/productos/agregar', controllers.agregarProducto)
 
-indexrouter.get('/productos/actualizar', indexController.actualizar)
+indexrouter.get('/productos/editar/:id', indexController.obtenerProducto);
 indexrouter.put('/productos/actualizar/:id', controllers.actualizarProducto);
 
 indexrouter.get('/productos/eliminar/:id', controllers.eliminarProducto)
